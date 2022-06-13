@@ -35,10 +35,14 @@ body {
 .app h2 {
   color: #fff;
   font-size: 40px;
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   border-radius: 0.5rem 0.5rem 0 0;
-  background-color: rgba(53, 40, 169, 0.42);
+  background-image: url(/bgc.jpg);
+  background-position: 10% 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: saturate(2);
 }
 
 .app form {
