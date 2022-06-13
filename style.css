@@ -17,3 +17,58 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark);
+  height: 100vh;
+  padding-top: 50px;
+  margin: 0 auto;
+}
+
+.app {
+  width: 60%;
+}
+
+.app h2 {
+  color: #fff;
+  font-size: 40px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: rgba(53, 40, 169, 0.42);
+}
+
+.app form {
+  display: flex;
+  width: 100%;
+  background-color: #262e4c87;
+}
+.app form input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.431);
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  width: 90%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.app form button {
+  background-color: rgba(0, 255, 34, 0.358);
+  color: #fff;
+  width: 10%;
+  height: 42px;
+  font-size: 25px;
+  border: none;
+  font-weight: 600;
+}
+
+.app ul li {
+  list-style: none;
+}
