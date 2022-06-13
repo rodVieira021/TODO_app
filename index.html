@@ -20,11 +20,24 @@
         <h2 class="tittle">Daily Tasks</h2>
         <form action="">
           <input for="text" placeholder="Add a New Task..." />
-          <button type="submit">&plus;</button>
+          <button class='btn-submit' type="submit">&plus;</button>
         </form>
         <ul>
           <li>task</li>
+          <li>
+            <ion-icon
+              onclick="editPost(this)"
+              class="icons"
+              name="create-outline"
+            ></ion-icon>
+            <ion-icon
+              onclick="deletePost(this)"
+              class="icons"
+              name="trash-outline"
+            ></ion-icon>
+          </li>
         </ul>
+        <div></div>
       </div>
     </div>
     <script

@@ -73,6 +73,25 @@ input:focus {
   font-weight: 600;
 }
 
+.app ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--gray);
+}
+
 .app ul li {
   list-style: none;
+  color: #fff;
+}
+
+.icons {
+  cursor: pointer;
+  color: #fff;
+}
+
+.completed {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
 }
