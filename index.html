@@ -4,55 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Daily Tasks</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/8f3a668c6e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do</title>
   </head>
   <body>
     <div class="container">
       <div class="app">
-        <h2 class="tittle">Daily Tasks</h2>
-        <form action="">
-          <input for="text" placeholder="Add a New Task..." />
-          <button class='btn-submit' type="submit">&plus;</button>
+        <h1>To Do List</h1>
+        <form>
+          <input type="text" placeholder="Add new task..." />
+          <button type="submit">&plus;</button>
         </form>
-        <ul>
-          <li>task</li>
-          <li>
-            <ion-icon
-              onclick="editPost(this)"
-              class="icons"
-              name="create-outline"
-            ></ion-icon>
-            <ion-icon
-              onclick="deletePost(this)"
-              class="icons"
-              name="trash-outline"
-            ></ion-icon>
-          </li>
-        </ul>
-        <div></div>
+        <ul></ul>
       </div>
     </div>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script src="/script.js"></script>
   </body>
-  <script src="/script.js"></script>
 </html>
-
-<!-- 
-<ion-icon onclick='editPost(this)' class='icons' name="create-outline"></ion-icon>
-<ion-icon onclick='deletePost(this)' class='icons' name="trash-outline"></ion-icon> 
--->
