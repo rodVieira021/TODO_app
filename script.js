@@ -67,3 +67,14 @@ function taskComplete(event) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   event.nextElementSibling.classList.toggle("completed");
 }
+
+function removeTask(event) {
+  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  tasks.forEach((task) => {
+    if (task.task === event.parentNode.children[1].value) {
+      tasks.splice(tasks.indexOf(task), 1);
+    }
+  });
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  event.parentElement.remove();
+}

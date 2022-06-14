@@ -4,12 +4,26 @@
   margin: 0;
 }
 
+:root {
+  --blue: #262e4c;
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --gray: #6b7280;
+  --green: #1dd2af;
+  --light: #eee;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --white: #fff;
+  --salmon: #ff5252;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
-  background-color: #e1e3ea;
+  background-color: var(--darker);
   height: 100vh;
   font-family: sans-serif;
 }
@@ -33,7 +47,7 @@
   background-image: url(img/bgc.jpg);
   background-repeat: no-repeat;
   background-position: 0 30%;
-  background-size:cover;
+  background-size: cover;
   filter: saturate(2.5);
   font-family: "Rajdhani", sans-serif;
 }
@@ -41,25 +55,26 @@
 .app form {
   display: flex;
   width: 100%;
-  background-color: #262e4c;
+  background-color: var(--blue);
 }
 
 .app form input {
   border: none;
-  background-color: #3c4979;
+  background-color: var(--dark);
   font-size: 18px;
   color: white;
   padding: 10px;
   width: 90%;
 }
+
 input:focus {
   outline: none;
 }
 
 .app form button {
   border: none;
-  color: white;
-  background-color: #1dd2af;
+  color: var(--white);
+  background-color: var(--green);
   font-size: 25px;
   font-weight: 600;
   height: 42px;
@@ -74,36 +89,39 @@ input:focus {
 
 .app ul li {
   padding: 10px;
-  background-color: #262e4c;
+  background-color: var(--darkest);
   border-bottom: 1px solid #3a4674;
 }
 
 .check {
-  width: 0.8em;
-  height: 0.8em;
+  width: 1em;
+  height: 1em;
   cursor: pointer;
   border-radius: 50%;
-  background-color: white;
-  border: 1px solid rgb(255, 255, 255);
+  background-color: var(--white);
+  border: 1px solid var(--white);
   -webkit-appearance: none;
 }
 
 .check:checked {
-  background-color: #1dd2af;
+  background-color: var(--green);
 }
 
 .task {
   font-size: 18px;
-  padding: 0 10px;
+  padding-left: 10px;
   width: fit-content;
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--white);
   width: 90%;
 }
 
 .task:focus {
   outline: none;
+}
+input::placeholder {
+  text-align: center;
 }
 
 .app ul li i {
@@ -112,10 +130,10 @@ input:focus {
 }
 
 .app ul li i:hover {
-  color: rgb(255, 82, 82);
+  color: var(--salmon);
 }
 
 .completed {
-  color: rgba(192, 192, 192, 0.8);
+  color: var(--gray);
   text-decoration: line-through;
 }
