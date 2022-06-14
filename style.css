@@ -26,6 +26,7 @@
   background-color: var(--darker);
   height: 100vh;
   font-family: sans-serif;
+  min-width: 385px;
 }
 
 .app {
@@ -75,7 +76,6 @@ input::placeholder {
   text-align: center;
 }
 
-
 .app form button {
   border: none;
   color: var(--white);
@@ -120,6 +120,12 @@ input::placeholder {
   border: none;
   color: var(--white);
   width: 90%;
+}
+
+@media (max-width: 520px) {
+  input.task {
+    max-width: 280px;
+  }
 }
 
 .task:focus {
