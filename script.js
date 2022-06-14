@@ -78,3 +78,36 @@ function removeTask(event) {
   localStorage.setItem("tasks", JSON.stringify(tasks));
   event.parentElement.remove();
 }
+
+let currentTask = null;
+
+function getCurrentTask(event) {
+  currentTask = event.value;
+}
+
+function editTask(event) {
+  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+
+  //check if task was fully deleted(empty)
+  if (event.value === "") {
+    alert("Task is empty!");
+    event.value = currentTask;
+    return;
+  }
+  //check if task already exist
+  tasks.forEach((task) => {
+    if (task.task === event.value) {
+      alert("Task alredy exist!");
+      event.value = currentTask;
+      return;
+    }
+  });
+
+  tasks.forEach((task) => {
+    if (task.task === event.value) {
+      task.task = event.value;
+    }
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
