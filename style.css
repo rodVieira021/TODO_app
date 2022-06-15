@@ -26,17 +26,11 @@
   background-color: var(--darker);
   height: 100vh;
   font-family: sans-serif;
-  min-width: 385px;
+  min-width: 281px;
 }
 
 .app {
   width: 60%;
-}
-
-@media (max-width: 768px) {
-  .app {
-    width: 90%;
-  }
 }
 
 .app h1 {
@@ -122,12 +116,6 @@ input::placeholder {
   width: 90%;
 }
 
-@media (max-width: 520px) {
-  input.task {
-    max-width: 280px;
-  }
-}
-
 .task:focus {
   outline: none;
 }
@@ -144,4 +132,32 @@ input::placeholder {
 .completed {
   color: var(--gray);
   text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+  }
+}
+
+@media (max-width: 520px) {
+  input.task {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  input.check {
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 5px;
+  }
+
+  .app form button {
+    width: 20%;
+  }
+
+  .fa-trash {
+    width: 0.5px;
+    padding-right: 10px;
+  }
 }
