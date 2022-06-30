@@ -18,13 +18,16 @@
   --salmon: #ff5252;
 }
 
+body {
+  background-color: var(--darker);
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
   background-color: var(--darker);
-  height: 100vh;
   font-family: sans-serif;
   min-width: 319px;
 }
