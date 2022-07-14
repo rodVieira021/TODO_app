@@ -104,7 +104,7 @@ function editTask(event) {
   });
 
   tasks.forEach((task) => {
-    if (task.task === event.value) {
+    if (task.task === currentTask) {
       task.task = event.value;
     }
   });
