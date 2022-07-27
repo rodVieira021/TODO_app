@@ -96,8 +96,8 @@ input::placeholder {
 }
 
 .check {
-  width: 1em;
-  height: 1em;
+  min-width: 1.2em;
+  min-height: 1.2em;
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--white);
@@ -116,19 +116,22 @@ input::placeholder {
   background: transparent;
   border: none;
   color: var(--white);
-  width: 90%;
+  width: 85%;
 }
 
 .task:focus {
   outline: none;
 }
 
-.app ul li i {
+.trash {
   float: right;
   cursor: pointer;
+  width: 0.5px;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 
-.app ul li i:hover {
+.trash:hover {
   color: var(--salmon);
 }
 
@@ -146,7 +149,8 @@ input::placeholder {
 @media (max-width: 520px) {
   input.task {
     font-size: 15px;
-    padding: 0;
+    padding: 0px;
+    width: 200px;
   }
 
   input.check {
@@ -159,7 +163,7 @@ input::placeholder {
     width: 20%;
   }
 
-  .fa-trash {
+  .trash {
     width: 0.5px;
     padding-right: 10px;
   }

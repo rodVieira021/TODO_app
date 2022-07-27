@@ -20,7 +20,7 @@ function loadTasks() {
     <input type="text" value="${task.task}" class="task ${
       task.completed ? "completed" : ""
     }" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-    <i class="fa fa-trash" onclick="removeTask(this)"></i>`;
+    <p class="trash" onclick="removeTask(this)">🗑</p>`;
     list.insertBefore(li, list.children[0]);
   });
 }
@@ -51,7 +51,7 @@ function addTask() {
 
   li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check">
   <input type="text" value="${task.value}" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-  <i class="fa fa-trash" onclick="removeTask(this)"></i>`;
+  <p class="trash" onclick="removeTask(this)">🗑</p>`;
   list.insertBefore(li, list.children[0]);
   // clear input
   task.value = "";
