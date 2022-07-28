@@ -60,7 +60,7 @@ body {
   border: none;
   background-color: var(--dark);
   font-size: 18px;
-  color: white;
+  color: #fff;
   padding: 10px;
   width: 90%;
 }
@@ -103,6 +103,7 @@ input::placeholder {
   background-color: var(--white);
   border: 1px solid var(--white);
   -webkit-appearance: none;
+  margin-top: 10px;
 }
 
 .check:checked {
@@ -116,7 +117,7 @@ input::placeholder {
   background: transparent;
   border: none;
   color: var(--white);
-  width: 85%;
+  max-width: 85%;
 }
 
 .task:focus {
@@ -126,13 +127,16 @@ input::placeholder {
 .trash {
   float: right;
   cursor: pointer;
-  width: 0.5px;
-  padding-right: 10px;
-  margin-right: 10px;
+  width: 60px;
+  padding: 5px 15px;
+  background-color: var(--salmon);
+  border: none;
+  color: #fff;
+  margin-top: 4px;
 }
 
 .trash:hover {
-  color: var(--salmon);
+  background-color: #ff5252ca;
 }
 
 .completed {
@@ -163,8 +167,17 @@ input::placeholder {
     width: 20%;
   }
 
-  .trash {
-    width: 0.5px;
-    padding-right: 10px;
+  .task {
+    max-width: 65%;
+  }
+
+  @media (max-width: 320px) {
+    .trash {
+      width: 55px;
+    }
+
+    .task {
+      max-width: 55%;
+    }
   }
 }
