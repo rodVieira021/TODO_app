@@ -131,7 +131,7 @@ input::placeholder {
   padding: 5px 15px;
   background-color: var(--salmon);
   border: none;
-  color:var(--white);
+  color: var(--white);
   margin-top: 4px;
   transition: 0.3s;
 }
@@ -144,7 +144,6 @@ input::placeholder {
   color: var(--gray);
   text-decoration: line-through;
 }
-
 
 @media (max-width: 768px) {
   .task {
@@ -175,7 +174,7 @@ input::placeholder {
     width: 70%;
   }
 
-  @media (max-width:  320px) {
+  @media (max-width: 320px) {
     .trash {
       width: 20%;
     }
