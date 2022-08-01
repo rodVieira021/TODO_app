@@ -33,7 +33,7 @@ body {
 }
 
 .app {
-  width: 90%;
+  width: 65%;
 }
 
 .app h1 {
@@ -80,7 +80,7 @@ input::placeholder {
   font-size: 25px;
   font-weight: 600;
   height: 42px;
-  width: 10%;
+  width: 20%;
 }
 
 .app ul {
@@ -90,14 +90,15 @@ input::placeholder {
 }
 
 .app ul li {
+  position: relative;
   padding: 10px;
   background-color: var(--darkest);
   border-bottom: 1px solid var(--bluish);
 }
 
 .check {
-  min-width: 1.2em;
-  min-height: 1.2em;
+  width: 1em;
+  height: 1em;
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--white);
@@ -113,11 +114,10 @@ input::placeholder {
 .task {
   font-size: 18px;
   padding-left: 10px;
-  width: fit-content;
   background: transparent;
   border: none;
   color: var(--white);
-  width: 85%;
+  width: 90%;
 }
 
 .task:focus {
@@ -125,14 +125,15 @@ input::placeholder {
 }
 
 .trash {
-  float: right;
+  position: absolute;
+  top: 13px;
+  right: 5px;
   cursor: pointer;
   width: 60px;
   padding: 5px 15px;
   background-color: var(--salmon);
   border: none;
   color: var(--white);
-  margin-top: 4px;
   transition: 0.3s;
 }
 
@@ -145,42 +146,43 @@ input::placeholder {
   text-decoration: line-through;
 }
 
-@media (max-width: 768px) {
-  .task {
-    width: 80%;
-  }
-  .trash {
-    width: 12%;
-  }
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 540px) {
+  .app form button {
+    min-width: 25%;
+  }
   input.task {
     font-size: 15px;
     padding: 0px;
   }
 
   input.check {
-    height: 0.5rem;
-    width: 0.5rem;
-    margin-right: 5px;
+    height: 0.6rem;
+    width: 0.6rem;
   }
 
-  .trash {
-    width: 20%;
-  }
-
-  .task {
-    width: 70%;
-  }
-
-  @media (max-width: 320px) {
-    .trash {
-      width: 20%;
+  @media (max-width: 425px) {
+    input.task {
+      font-size: 12px;
+      padding: 0px;
     }
 
-    .task {
-      width: 65%;
+    input.check {
+      height: 0.6rem;
+      width: 0.6rem;
+      margin-right: 2px;
+    }
+
+    .trash {
+      width: 35px;
+      font-size: 10px;
+      text-align: center;
+      padding: 5px;
     }
   }
 }
