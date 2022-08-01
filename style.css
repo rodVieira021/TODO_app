@@ -33,7 +33,7 @@ body {
 }
 
 .app {
-  width: 65%;
+ width: 75%;
 }
 
 .app h1 {
@@ -153,6 +153,10 @@ ul {
 }
 
 @media (max-width: 540px) {
+
+  .app{
+    width: 95%;
+  }
   .app form button {
     min-width: 25%;
   }
@@ -183,6 +187,10 @@ ul {
       font-size: 10px;
       text-align: center;
       padding: 5px;
+    }
+
+    .app{
+      width: 95%;
     }
   }
 }

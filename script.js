@@ -111,6 +111,3 @@ function editTask(event) {
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-
-
-
