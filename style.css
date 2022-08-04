@@ -33,7 +33,7 @@ body {
 }
 
 .app {
- width: 75%;
+  width: 75%;
 }
 
 .app h1 {
@@ -153,8 +153,7 @@ ul {
 }
 
 @media (max-width: 540px) {
-
-  .app{
+  .app {
     width: 95%;
   }
   .app form button {
@@ -172,13 +171,13 @@ ul {
 
   @media (max-width: 425px) {
     input.task {
-      font-size: 12px;
+      font-size: 13.5px;
       padding: 0px;
     }
 
     input.check {
-      height: 0.6rem;
-      width: 0.6rem;
+      height: 0.7rem;
+      width: 0.7rem;
       margin-right: 2px;
     }
 
@@ -189,7 +188,7 @@ ul {
       padding: 5px;
     }
 
-    .app{
+    .app {
       width: 95%;
     }
   }
