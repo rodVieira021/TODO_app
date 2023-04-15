@@ -16,11 +16,13 @@ function loadTasks() {
 
     li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check" ${
       task.completed ? "checked" : ""
-    }>
+    }/>
     <input type="text" value="${task.task}" class="task ${
       task.completed ? "completed" : ""
-    }" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+    }" onfocus="getCurrentTask(this)"/>
+    <button class="edit" onclick="editTask(this)">EDIT</button>
     <button class="trash" onclick="removeTask(this)">DEL</button>`;
+
     list.insertBefore(li, list.children[0]);
   });
 }
@@ -50,7 +52,8 @@ function addTask() {
   const li = document.createElement("li");
 
   li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check">
-  <input type="text" value="${task.value}" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+  <input type="text" value="${task.value}" class="task" onfocus="getCurrentTask(this)"/>
+  <button class="edit" onclick="editTask(this)">EDIT</button>
   <button class="trash" onclick="removeTask(this)">DEL</button>`;
   list.insertBefore(li, list.children[0]);
   // clear input
@@ -86,28 +89,8 @@ function getCurrentTask(event) {
 }
 
 function editTask(event) {
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
-
-  //check if task was fully deleted(empty)
-  if (event.value === "") {
-    alert("Task is empty!");
-    event.value = currentTask;
-    return;
-  }
-  //check if task already exist
-  // tasks.forEach((task) => {
-  //   if (task.task === event.value) {
-  //     alert("Task already exist!");
-  //     event.value = currentTask;
-  //     return;
-  //   }
-  // });
-
-  tasks.forEach((task) => {
-    if (task.task === currentTask) {
-      task.task = event.value;
-    }
-  });
-
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  const mainInput = document.querySelector("form input");
+  const taskInput = event.parentNode.querySelector(".task");
+  mainInput.value = taskInput.value;
+  removeTask(event);
 }
